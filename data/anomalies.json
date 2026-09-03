@@ -1,0 +1,25 @@
+[{
+        "confidence": "HIGH",
+        "spectral_index": 1.92,
+        "type": "Manganese Outcrop",
+        "coordinates": [
+            [21.812, 80.178],
+            [21.819, 80.186],
+            [21.814, 80.194],
+            [21.806, 80.188],
+            [21.812, 80.178]
+        ]
+    },
+    {
+        "confidence": "MEDIUM",
+        "spectral_index": 1.54,
+        "type": "Hydrothermal Alteration",
+        "coordinates": [
+            [21.798, 80.190],
+            [21.804, 80.198],
+            [21.799, 80.205],
+            [21.792, 80.196],
+            [21.798, 80.190]
+        ]
+    }
+]
