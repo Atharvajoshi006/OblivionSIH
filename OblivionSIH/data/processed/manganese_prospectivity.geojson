@@ -1,0 +1,1493 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "methodology": "Multi-Criteria Mineral Prospectivity Mapping (MPM)",
+    "region": "Balaghat-Bharweli Manganese Belt (Sausar Group)",
+    "total_cells_evaluated": 36,
+    "evidence_layers": {
+      "lithological_host": "35% (Mansar Formation)",
+      "structural_corridor": "30% (Perpendicular Shear Distance)",
+      "satellite_surface_alteration": "25% (Sentinel-2 L2A Hydrothermal/Ferrous)",
+      "geophysical_magnetic_proxy": "10% (Inferred Litho-Magnetic Signature)"
+    },
+    "scientific_disclaimer": "Estimates mineralization prospectivity via space and geological proxies; requires drillhole core validation for reserve tonnage. Optical satellites do NOT detect subsurface ore."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.155,
+              21.78583
+            ],
+            [
+              80.165,
+              21.78583
+            ],
+            [
+              80.165,
+              21.79417
+            ],
+            [
+              80.155,
+              21.79417
+            ],
+            [
+              80.155,
+              21.78583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-001",
+        "confidence": "HIGH",
+        "spectral_index": 0.76,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.76,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.167,
+              21.78583
+            ],
+            [
+              80.177,
+              21.78583
+            ],
+            [
+              80.177,
+              21.79417
+            ],
+            [
+              80.167,
+              21.79417
+            ],
+            [
+              80.167,
+              21.78583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-002",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.78,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.78,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.179,
+              21.78583
+            ],
+            [
+              80.189,
+              21.78583
+            ],
+            [
+              80.189,
+              21.79417
+            ],
+            [
+              80.179,
+              21.79417
+            ],
+            [
+              80.179,
+              21.78583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-003",
+        "confidence": "HIGH",
+        "spectral_index": 0.737,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.737,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.191,
+              21.78583
+            ],
+            [
+              80.201,
+              21.78583
+            ],
+            [
+              80.201,
+              21.79417
+            ],
+            [
+              80.191,
+              21.79417
+            ],
+            [
+              80.191,
+              21.78583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-004",
+        "confidence": "HIGH",
+        "spectral_index": 0.694,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.694,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.203,
+              21.78583
+            ],
+            [
+              80.213,
+              21.78583
+            ],
+            [
+              80.213,
+              21.79417
+            ],
+            [
+              80.203,
+              21.79417
+            ],
+            [
+              80.203,
+              21.78583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-005",
+        "confidence": "MODERATE",
+        "spectral_index": 0.546,
+        "type": "Manganese Prospect (MODERATE)",
+        "prospectivity_score": 0.546,
+        "classification": "MODERATE",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.215,
+              21.78583
+            ],
+            [
+              80.225,
+              21.78583
+            ],
+            [
+              80.225,
+              21.79417
+            ],
+            [
+              80.215,
+              21.79417
+            ],
+            [
+              80.215,
+              21.78583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-006",
+        "confidence": "MODERATE",
+        "spectral_index": 0.503,
+        "type": "Manganese Prospect (MODERATE)",
+        "prospectivity_score": 0.503,
+        "classification": "MODERATE",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.155,
+              21.79583
+            ],
+            [
+              80.165,
+              21.79583
+            ],
+            [
+              80.165,
+              21.80417
+            ],
+            [
+              80.155,
+              21.80417
+            ],
+            [
+              80.155,
+              21.79583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-007",
+        "confidence": "HIGH",
+        "spectral_index": 0.747,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.747,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.167,
+              21.79583
+            ],
+            [
+              80.177,
+              21.79583
+            ],
+            [
+              80.177,
+              21.80417
+            ],
+            [
+              80.167,
+              21.80417
+            ],
+            [
+              80.167,
+              21.79583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-008",
+        "confidence": "HIGH",
+        "spectral_index": 0.74,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.74,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.179,
+              21.79583
+            ],
+            [
+              80.189,
+              21.79583
+            ],
+            [
+              80.189,
+              21.80417
+            ],
+            [
+              80.179,
+              21.80417
+            ],
+            [
+              80.179,
+              21.79583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-009",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.784,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.784,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.191,
+              21.79583
+            ],
+            [
+              80.201,
+              21.79583
+            ],
+            [
+              80.201,
+              21.80417
+            ],
+            [
+              80.191,
+              21.80417
+            ],
+            [
+              80.191,
+              21.79583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-010",
+        "confidence": "HIGH",
+        "spectral_index": 0.757,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.757,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.203,
+              21.79583
+            ],
+            [
+              80.213,
+              21.79583
+            ],
+            [
+              80.213,
+              21.80417
+            ],
+            [
+              80.203,
+              21.80417
+            ],
+            [
+              80.203,
+              21.79583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-011",
+        "confidence": "HIGH",
+        "spectral_index": 0.714,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.714,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.215,
+              21.79583
+            ],
+            [
+              80.225,
+              21.79583
+            ],
+            [
+              80.225,
+              21.80417
+            ],
+            [
+              80.215,
+              21.80417
+            ],
+            [
+              80.215,
+              21.79583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-012",
+        "confidence": "MODERATE",
+        "spectral_index": 0.566,
+        "type": "Manganese Prospect (MODERATE)",
+        "prospectivity_score": 0.566,
+        "classification": "MODERATE",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.155,
+              21.80583
+            ],
+            [
+              80.165,
+              21.80583
+            ],
+            [
+              80.165,
+              21.81417
+            ],
+            [
+              80.155,
+              21.81417
+            ],
+            [
+              80.155,
+              21.80583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-013",
+        "confidence": "HIGH",
+        "spectral_index": 0.766,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.766,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.167,
+              21.80583
+            ],
+            [
+              80.177,
+              21.80583
+            ],
+            [
+              80.177,
+              21.81417
+            ],
+            [
+              80.167,
+              21.81417
+            ],
+            [
+              80.167,
+              21.80583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-014",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.79,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.79,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.179,
+              21.80583
+            ],
+            [
+              80.189,
+              21.80583
+            ],
+            [
+              80.189,
+              21.81417
+            ],
+            [
+              80.179,
+              21.81417
+            ],
+            [
+              80.179,
+              21.80583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-015",
+        "confidence": "HIGH",
+        "spectral_index": 0.764,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.764,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.191,
+              21.80583
+            ],
+            [
+              80.201,
+              21.80583
+            ],
+            [
+              80.201,
+              21.81417
+            ],
+            [
+              80.191,
+              21.81417
+            ],
+            [
+              80.191,
+              21.80583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-016",
+        "confidence": "HIGH",
+        "spectral_index": 0.764,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.764,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.203,
+              21.80583
+            ],
+            [
+              80.213,
+              21.80583
+            ],
+            [
+              80.213,
+              21.81417
+            ],
+            [
+              80.203,
+              21.81417
+            ],
+            [
+              80.203,
+              21.80583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-017",
+        "confidence": "HIGH",
+        "spectral_index": 0.776,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.776,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.215,
+              21.80583
+            ],
+            [
+              80.225,
+              21.80583
+            ],
+            [
+              80.225,
+              21.81417
+            ],
+            [
+              80.215,
+              21.81417
+            ],
+            [
+              80.215,
+              21.80583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-018",
+        "confidence": "HIGH",
+        "spectral_index": 0.733,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.733,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.155,
+              21.81583
+            ],
+            [
+              80.165,
+              21.81583
+            ],
+            [
+              80.165,
+              21.82417
+            ],
+            [
+              80.155,
+              21.82417
+            ],
+            [
+              80.155,
+              21.81583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-019",
+        "confidence": "HIGH",
+        "spectral_index": 0.759,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.759,
+        "classification": "HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.167,
+              21.81583
+            ],
+            [
+              80.177,
+              21.81583
+            ],
+            [
+              80.177,
+              21.82417
+            ],
+            [
+              80.167,
+              21.82417
+            ],
+            [
+              80.167,
+              21.81583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-020",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.786,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.786,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.179,
+              21.81583
+            ],
+            [
+              80.189,
+              21.81583
+            ],
+            [
+              80.189,
+              21.82417
+            ],
+            [
+              80.179,
+              21.82417
+            ],
+            [
+              80.179,
+              21.81583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-021",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.812,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.812,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.191,
+              21.81583
+            ],
+            [
+              80.201,
+              21.81583
+            ],
+            [
+              80.201,
+              21.82417
+            ],
+            [
+              80.191,
+              21.82417
+            ],
+            [
+              80.191,
+              21.81583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-022",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.839,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.839,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.203,
+              21.81583
+            ],
+            [
+              80.213,
+              21.81583
+            ],
+            [
+              80.213,
+              21.82417
+            ],
+            [
+              80.203,
+              21.82417
+            ],
+            [
+              80.203,
+              21.81583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-023",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.843,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.843,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.215,
+              21.81583
+            ],
+            [
+              80.225,
+              21.81583
+            ],
+            [
+              80.225,
+              21.82417
+            ],
+            [
+              80.215,
+              21.82417
+            ],
+            [
+              80.215,
+              21.81583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-024",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.849,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.849,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.155,
+              21.82583
+            ],
+            [
+              80.165,
+              21.82583
+            ],
+            [
+              80.165,
+              21.83417
+            ],
+            [
+              80.155,
+              21.83417
+            ],
+            [
+              80.155,
+              21.82583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-025",
+        "confidence": "MODERATE",
+        "spectral_index": 0.635,
+        "type": "Manganese Prospect (MODERATE)",
+        "prospectivity_score": 0.635,
+        "classification": "MODERATE",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.167,
+              21.82583
+            ],
+            [
+              80.177,
+              21.82583
+            ],
+            [
+              80.177,
+              21.83417
+            ],
+            [
+              80.167,
+              21.83417
+            ],
+            [
+              80.167,
+              21.82583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-026",
+        "confidence": "HIGH",
+        "spectral_index": 0.661,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.661,
+        "classification": "HIGH",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.179,
+              21.82583
+            ],
+            [
+              80.189,
+              21.82583
+            ],
+            [
+              80.189,
+              21.83417
+            ],
+            [
+              80.179,
+              21.83417
+            ],
+            [
+              80.179,
+              21.82583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-027",
+        "confidence": "HIGH",
+        "spectral_index": 0.688,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.688,
+        "classification": "HIGH",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.191,
+              21.82583
+            ],
+            [
+              80.201,
+              21.82583
+            ],
+            [
+              80.201,
+              21.83417
+            ],
+            [
+              80.191,
+              21.83417
+            ],
+            [
+              80.191,
+              21.82583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-028",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.819,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.819,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.203,
+              21.82583
+            ],
+            [
+              80.213,
+              21.82583
+            ],
+            [
+              80.213,
+              21.83417
+            ],
+            [
+              80.203,
+              21.83417
+            ],
+            [
+              80.203,
+              21.82583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-029",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.846,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.846,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.215,
+              21.82583
+            ],
+            [
+              80.225,
+              21.82583
+            ],
+            [
+              80.225,
+              21.83417
+            ],
+            [
+              80.215,
+              21.83417
+            ],
+            [
+              80.215,
+              21.82583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-030",
+        "confidence": "VERY_HIGH",
+        "spectral_index": 0.872,
+        "type": "Manganese Prospect (VERY_HIGH)",
+        "prospectivity_score": 0.872,
+        "classification": "VERY_HIGH",
+        "formation": "Mansar Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Moderate-to-high magnetic susceptibility (+450 to +1100 nT) and positive gravity residual"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.155,
+              21.83583
+            ],
+            [
+              80.165,
+              21.83583
+            ],
+            [
+              80.165,
+              21.84417
+            ],
+            [
+              80.155,
+              21.84417
+            ],
+            [
+              80.155,
+              21.83583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-031",
+        "confidence": "MODERATE",
+        "spectral_index": 0.489,
+        "type": "Manganese Prospect (MODERATE)",
+        "prospectivity_score": 0.489,
+        "classification": "MODERATE",
+        "formation": "Sitasaongi Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "Low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.167,
+              21.83583
+            ],
+            [
+              80.177,
+              21.83583
+            ],
+            [
+              80.177,
+              21.84417
+            ],
+            [
+              80.167,
+              21.84417
+            ],
+            [
+              80.167,
+              21.83583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-032",
+        "confidence": "MODERATE",
+        "spectral_index": 0.642,
+        "type": "Manganese Prospect (MODERATE)",
+        "prospectivity_score": 0.642,
+        "classification": "MODERATE",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.179,
+              21.83583
+            ],
+            [
+              80.189,
+              21.83583
+            ],
+            [
+              80.189,
+              21.84417
+            ],
+            [
+              80.179,
+              21.84417
+            ],
+            [
+              80.179,
+              21.83583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-033",
+        "confidence": "HIGH",
+        "spectral_index": 0.668,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.668,
+        "classification": "HIGH",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.191,
+              21.83583
+            ],
+            [
+              80.201,
+              21.83583
+            ],
+            [
+              80.201,
+              21.84417
+            ],
+            [
+              80.191,
+              21.84417
+            ],
+            [
+              80.191,
+              21.83583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-034",
+        "confidence": "HIGH",
+        "spectral_index": 0.695,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.695,
+        "classification": "HIGH",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.203,
+              21.83583
+            ],
+            [
+              80.213,
+              21.83583
+            ],
+            [
+              80.213,
+              21.84417
+            ],
+            [
+              80.203,
+              21.84417
+            ],
+            [
+              80.203,
+              21.83583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-035",
+        "confidence": "HIGH",
+        "spectral_index": 0.721,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.721,
+        "classification": "HIGH",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.215,
+              21.83583
+            ],
+            [
+              80.225,
+              21.83583
+            ],
+            [
+              80.225,
+              21.84417
+            ],
+            [
+              80.215,
+              21.84417
+            ],
+            [
+              80.215,
+              21.83583
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "GRID-036",
+        "confidence": "HIGH",
+        "spectral_index": 0.748,
+        "type": "Manganese Prospect (HIGH)",
+        "prospectivity_score": 0.748,
+        "classification": "HIGH",
+        "formation": "Chorbaoli Formation",
+        "nearest_mine": "Bharweli Mine (Balaghat)",
+        "geophysical_proxy": "High resistivity, low magnetic anomaly"
+      }
+    }
+  ]
+}

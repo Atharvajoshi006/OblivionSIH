@@ -1,0 +1,1010 @@
+[
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.872,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.82583,
+        80.215
+      ],
+      [
+        21.82583,
+        80.225
+      ],
+      [
+        21.83417,
+        80.225
+      ],
+      [
+        21.83417,
+        80.215
+      ],
+      [
+        21.82583,
+        80.215
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.849,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.81583,
+        80.215
+      ],
+      [
+        21.81583,
+        80.225
+      ],
+      [
+        21.82417,
+        80.225
+      ],
+      [
+        21.82417,
+        80.215
+      ],
+      [
+        21.81583,
+        80.215
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.846,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.82583,
+        80.203
+      ],
+      [
+        21.82583,
+        80.213
+      ],
+      [
+        21.83417,
+        80.213
+      ],
+      [
+        21.83417,
+        80.203
+      ],
+      [
+        21.82583,
+        80.203
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.843,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.81583,
+        80.203
+      ],
+      [
+        21.81583,
+        80.213
+      ],
+      [
+        21.82417,
+        80.213
+      ],
+      [
+        21.82417,
+        80.203
+      ],
+      [
+        21.81583,
+        80.203
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.839,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.81583,
+        80.191
+      ],
+      [
+        21.81583,
+        80.201
+      ],
+      [
+        21.82417,
+        80.201
+      ],
+      [
+        21.82417,
+        80.191
+      ],
+      [
+        21.81583,
+        80.191
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.819,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.82583,
+        80.191
+      ],
+      [
+        21.82583,
+        80.201
+      ],
+      [
+        21.83417,
+        80.201
+      ],
+      [
+        21.83417,
+        80.191
+      ],
+      [
+        21.82583,
+        80.191
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.812,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.81583,
+        80.179
+      ],
+      [
+        21.81583,
+        80.189
+      ],
+      [
+        21.82417,
+        80.189
+      ],
+      [
+        21.82417,
+        80.179
+      ],
+      [
+        21.81583,
+        80.179
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.79,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.80583,
+        80.167
+      ],
+      [
+        21.80583,
+        80.177
+      ],
+      [
+        21.81417,
+        80.177
+      ],
+      [
+        21.81417,
+        80.167
+      ],
+      [
+        21.80583,
+        80.167
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.786,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.81583,
+        80.167
+      ],
+      [
+        21.81583,
+        80.177
+      ],
+      [
+        21.82417,
+        80.177
+      ],
+      [
+        21.82417,
+        80.167
+      ],
+      [
+        21.81583,
+        80.167
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.784,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.79583,
+        80.179
+      ],
+      [
+        21.79583,
+        80.189
+      ],
+      [
+        21.80417,
+        80.189
+      ],
+      [
+        21.80417,
+        80.179
+      ],
+      [
+        21.79583,
+        80.179
+      ]
+    ]
+  },
+  {
+    "confidence": "VERY_HIGH",
+    "spectral_index": 0.78,
+    "type": "Manganese Prospect (VERY_HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.78583,
+        80.167
+      ],
+      [
+        21.78583,
+        80.177
+      ],
+      [
+        21.79417,
+        80.177
+      ],
+      [
+        21.79417,
+        80.167
+      ],
+      [
+        21.78583,
+        80.167
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.776,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.80583,
+        80.203
+      ],
+      [
+        21.80583,
+        80.213
+      ],
+      [
+        21.81417,
+        80.213
+      ],
+      [
+        21.81417,
+        80.203
+      ],
+      [
+        21.80583,
+        80.203
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.766,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.80583,
+        80.155
+      ],
+      [
+        21.80583,
+        80.165
+      ],
+      [
+        21.81417,
+        80.165
+      ],
+      [
+        21.81417,
+        80.155
+      ],
+      [
+        21.80583,
+        80.155
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.764,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.80583,
+        80.179
+      ],
+      [
+        21.80583,
+        80.189
+      ],
+      [
+        21.81417,
+        80.189
+      ],
+      [
+        21.81417,
+        80.179
+      ],
+      [
+        21.80583,
+        80.179
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.764,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.80583,
+        80.191
+      ],
+      [
+        21.80583,
+        80.201
+      ],
+      [
+        21.81417,
+        80.201
+      ],
+      [
+        21.81417,
+        80.191
+      ],
+      [
+        21.80583,
+        80.191
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.76,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.78583,
+        80.155
+      ],
+      [
+        21.78583,
+        80.165
+      ],
+      [
+        21.79417,
+        80.165
+      ],
+      [
+        21.79417,
+        80.155
+      ],
+      [
+        21.78583,
+        80.155
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.759,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.81583,
+        80.155
+      ],
+      [
+        21.81583,
+        80.165
+      ],
+      [
+        21.82417,
+        80.165
+      ],
+      [
+        21.82417,
+        80.155
+      ],
+      [
+        21.81583,
+        80.155
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.757,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.79583,
+        80.191
+      ],
+      [
+        21.79583,
+        80.201
+      ],
+      [
+        21.80417,
+        80.201
+      ],
+      [
+        21.80417,
+        80.191
+      ],
+      [
+        21.79583,
+        80.191
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.748,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.83583,
+        80.215
+      ],
+      [
+        21.83583,
+        80.225
+      ],
+      [
+        21.84417,
+        80.225
+      ],
+      [
+        21.84417,
+        80.215
+      ],
+      [
+        21.83583,
+        80.215
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.747,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.79583,
+        80.155
+      ],
+      [
+        21.79583,
+        80.165
+      ],
+      [
+        21.80417,
+        80.165
+      ],
+      [
+        21.80417,
+        80.155
+      ],
+      [
+        21.79583,
+        80.155
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.74,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.79583,
+        80.167
+      ],
+      [
+        21.79583,
+        80.177
+      ],
+      [
+        21.80417,
+        80.177
+      ],
+      [
+        21.80417,
+        80.167
+      ],
+      [
+        21.79583,
+        80.167
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.737,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.78583,
+        80.179
+      ],
+      [
+        21.78583,
+        80.189
+      ],
+      [
+        21.79417,
+        80.189
+      ],
+      [
+        21.79417,
+        80.179
+      ],
+      [
+        21.78583,
+        80.179
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.733,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.80583,
+        80.215
+      ],
+      [
+        21.80583,
+        80.225
+      ],
+      [
+        21.81417,
+        80.225
+      ],
+      [
+        21.81417,
+        80.215
+      ],
+      [
+        21.80583,
+        80.215
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.721,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.83583,
+        80.203
+      ],
+      [
+        21.83583,
+        80.213
+      ],
+      [
+        21.84417,
+        80.213
+      ],
+      [
+        21.84417,
+        80.203
+      ],
+      [
+        21.83583,
+        80.203
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.714,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.79583,
+        80.203
+      ],
+      [
+        21.79583,
+        80.213
+      ],
+      [
+        21.80417,
+        80.213
+      ],
+      [
+        21.80417,
+        80.203
+      ],
+      [
+        21.79583,
+        80.203
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.695,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.83583,
+        80.191
+      ],
+      [
+        21.83583,
+        80.201
+      ],
+      [
+        21.84417,
+        80.201
+      ],
+      [
+        21.84417,
+        80.191
+      ],
+      [
+        21.83583,
+        80.191
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.694,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Mansar Formation",
+    "coordinates": [
+      [
+        21.78583,
+        80.191
+      ],
+      [
+        21.78583,
+        80.201
+      ],
+      [
+        21.79417,
+        80.201
+      ],
+      [
+        21.79417,
+        80.191
+      ],
+      [
+        21.78583,
+        80.191
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.688,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.82583,
+        80.179
+      ],
+      [
+        21.82583,
+        80.189
+      ],
+      [
+        21.83417,
+        80.189
+      ],
+      [
+        21.83417,
+        80.179
+      ],
+      [
+        21.82583,
+        80.179
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.668,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.83583,
+        80.179
+      ],
+      [
+        21.83583,
+        80.189
+      ],
+      [
+        21.84417,
+        80.189
+      ],
+      [
+        21.84417,
+        80.179
+      ],
+      [
+        21.83583,
+        80.179
+      ]
+    ]
+  },
+  {
+    "confidence": "HIGH",
+    "spectral_index": 0.661,
+    "type": "Manganese Prospect (HIGH)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.82583,
+        80.167
+      ],
+      [
+        21.82583,
+        80.177
+      ],
+      [
+        21.83417,
+        80.177
+      ],
+      [
+        21.83417,
+        80.167
+      ],
+      [
+        21.82583,
+        80.167
+      ]
+    ]
+  },
+  {
+    "confidence": "MODERATE",
+    "spectral_index": 0.642,
+    "type": "Manganese Prospect (MODERATE)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.83583,
+        80.167
+      ],
+      [
+        21.83583,
+        80.177
+      ],
+      [
+        21.84417,
+        80.177
+      ],
+      [
+        21.84417,
+        80.167
+      ],
+      [
+        21.83583,
+        80.167
+      ]
+    ]
+  },
+  {
+    "confidence": "MODERATE",
+    "spectral_index": 0.635,
+    "type": "Manganese Prospect (MODERATE)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.82583,
+        80.155
+      ],
+      [
+        21.82583,
+        80.165
+      ],
+      [
+        21.83417,
+        80.165
+      ],
+      [
+        21.83417,
+        80.155
+      ],
+      [
+        21.82583,
+        80.155
+      ]
+    ]
+  },
+  {
+    "confidence": "MODERATE",
+    "spectral_index": 0.566,
+    "type": "Manganese Prospect (MODERATE)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.79583,
+        80.215
+      ],
+      [
+        21.79583,
+        80.225
+      ],
+      [
+        21.80417,
+        80.225
+      ],
+      [
+        21.80417,
+        80.215
+      ],
+      [
+        21.79583,
+        80.215
+      ]
+    ]
+  },
+  {
+    "confidence": "MODERATE",
+    "spectral_index": 0.546,
+    "type": "Manganese Prospect (MODERATE)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.78583,
+        80.203
+      ],
+      [
+        21.78583,
+        80.213
+      ],
+      [
+        21.79417,
+        80.213
+      ],
+      [
+        21.79417,
+        80.203
+      ],
+      [
+        21.78583,
+        80.203
+      ]
+    ]
+  },
+  {
+    "confidence": "MODERATE",
+    "spectral_index": 0.503,
+    "type": "Manganese Prospect (MODERATE)",
+    "formation": "Chorbaoli Formation",
+    "coordinates": [
+      [
+        21.78583,
+        80.215
+      ],
+      [
+        21.78583,
+        80.225
+      ],
+      [
+        21.79417,
+        80.225
+      ],
+      [
+        21.79417,
+        80.215
+      ],
+      [
+        21.78583,
+        80.215
+      ]
+    ]
+  },
+  {
+    "confidence": "MODERATE",
+    "spectral_index": 0.489,
+    "type": "Manganese Prospect (MODERATE)",
+    "formation": "Sitasaongi Formation",
+    "coordinates": [
+      [
+        21.83583,
+        80.155
+      ],
+      [
+        21.83583,
+        80.165
+      ],
+      [
+        21.84417,
+        80.165
+      ],
+      [
+        21.84417,
+        80.155
+      ],
+      [
+        21.83583,
+        80.155
+      ]
+    ]
+  }
+]

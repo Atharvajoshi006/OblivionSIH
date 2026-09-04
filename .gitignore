@@ -1,0 +1,67 @@
+# =====================================================================
+# GeoOre-AI Git Ignore (Root Repository)
+# =====================================================================
+
+# 1. Environments & Dependencies
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# 2. Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+dist/
+build/
+
+# 3. Secrets, Credentials & API Keys
+.env
+.env.*
+!.env.example
+*.token
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# 4. Large Geospatial Data & Satellite Imagery
+data/raw/
+**/data/raw/
+*.SAFE/
+*.tif
+*.tiff
+*.nc
+*.hdf
+*.grib
+*.zip
+*.tar.gz
+
+# Runtime API cache
+**/data/processed/environmental_cache.json
+
+# 5. Testing, Coverage & Notebooks
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints
+
+# 6. IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 7. Operating System Junk
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini
+
+# 8. Logs & Runtime Scratch Outputs
+*.log
+logs/
+scratch/
+.system_generated/

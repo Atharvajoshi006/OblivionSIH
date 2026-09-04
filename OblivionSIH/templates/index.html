@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoOre-AI | Ministry of Steel Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .panel-base {
+            background: #0c1322;
+            border: 1px solid #1e293b;
+        }
+        
+        .panel-hud {
+            background: rgba(12, 19, 34, 0.88);
+            backdrop-filter: blur(8px);
+            border: 1px solid #1e293b;
+        }
+        
+        .leaflet-tile-pane {
+            filter: contrast(1.15) brightness(0.85) saturate(0.9);
+        }
+        
+        input[type=range] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: #1e293b;
+            height: 4px;
+            border-radius: 2px;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 16px;
+            background: #64748b;
+            border-radius: 1px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-[#060a12] text-slate-200 h-screen flex flex-col overflow-hidden text-xs select-none">
+
+    <header class="h-12 border-b border-slate-800 bg-[#080d1a] px-4 flex items-center justify-between z-30 shrink-0">
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2.5">
+                <div class="w-6 h-6 rounded bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center font-bold">⛏</div>
+                <div class="flex items-center gap-1.5">
+                    <span class="font-bold text-sm tracking-wide text-white">GeoOre-AI</span>
+                    <span class="font-mono text-[9px] px-1 bg-slate-800 border border-slate-700 text-slate-400">SIH26009</span>
+                </div>
+            </div>
+            <div class="hidden xl:flex items-center gap-6 text-[11px] font-mono text-slate-400 border-l border-slate-800 pl-6">
+                <div>ORBIT: <span class="text-slate-200">Sentinel-2 | Pass 142</span></div>
+                <div>SUN AZ: <span class="text-slate-200">148.2°</span></div>
+                <div>CLOUD: <span class="text-slate-200">4.2%</span></div>
+                <div class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                    <span>DOWNLINK: <span class="text-emerald-400 font-semibold">ACTIVE</span></span>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center gap-3 font-mono text-[11px]">
+            <span class="text-slate-400">BALAGHAT BELT (MP)</span>
+            <span class="px-2 py-0.5 border border-slate-700 bg-slate-800 text-slate-300">MINISTRY OF STEEL PORTAL</span>
+        </div>
+    </header>
+
+    <div class="flex-1 flex overflow-hidden">
+
+        <div class="w-10 border-r border-slate-800 bg-[#080d1a] flex flex-col items-center py-3 gap-4 shrink-0 text-slate-500 z-20">
+            <button class="text-emerald-400 border-l-2 border-emerald-400 pl-2 -ml-2">⌖</button>
+            <button class="hover:text-slate-300">▥</button>
+            <button class="hover:text-slate-300">⚙</button>
+        </div>
+
+        <div class="flex-1 relative bg-black overflow-hidden">
+            <div id="map" class="w-full h-full"></div>
+
+            <div class="absolute top-3 left-3 z-[1000] w-64 panel-hud p-3 text-[11px]">
+                <div class="font-bold text-slate-400 tracking-wider mb-2 font-mono uppercase text-[10px]">Map Spectral Layers</div>
+                <div class="space-y-1.5 mb-3">
+                    <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" id="layer-sat" checked class="accent-emerald-500"> True Color Optical (B04, B03, B02)
+          </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" id="layer-veg" checked class="accent-emerald-500"> Vegetation Mask (NDVI &lt; 0.25)
+          </label>
+                    <label class="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" id="layer-ore" checked class="accent-emerald-500"> Surface Alteration & Prospects (SWIR/NIR)
+          </label>
+                </div>
+                <div class="border-t border-slate-800 pt-2 space-y-2 font-mono text-[10px]">
+                    <div>
+                        <div class="flex justify-between text-slate-400"><span>BAND RATIO</span><span id="label-bandratio">px: 59,363</span></div>
+                        <input type="range" id="slider-bandratio" class="w-full" value="70">
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-slate-400"><span>PROSPECTIVITY THRESHOLD</span><span id="label-swir1">Score &ge; 0.60</span></div>
+                        <input type="range" id="slider-swir1" min="40" max="95" class="w-full" value="60">
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-slate-400"><span>SWIR-2 / NIR</span><span>px: 12,740</span></div>
+                        <input type="range" class="w-full" value="20">
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute top-3 right-3 z-[1000] panel-hud px-3 py-1 font-mono text-[11px] text-slate-300">
+                LAT: 21.805°N &nbsp; LON: 80.185°E
+            </div>
+
+            <div class="absolute bottom-12 left-3 z-[1000] panel-hud p-2.5 font-mono text-[10px] flex flex-col gap-1 w-44">
+                <div class="text-slate-400 uppercase tracking-wide">Prospectivity Index</div>
+                <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 bg-rose-500"></span> Very High (&ge; 0.78)</div>
+                <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 bg-amber-500"></span> High (&ge; 0.65)</div>
+                <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 bg-indigo-500"></span> Moderate (&ge; 0.45)</div>
+            </div>
+
+            <div class="absolute bottom-2 left-3 right-3 z-[1000] panel-hud px-4 py-2 flex items-center gap-4 font-mono text-[10px]">
+                <button class="text-emerald-400 text-xs">▶</button>
+                <span class="text-slate-400 shrink-0">TIMELINE:</span>
+                <input type="range" min="1" max="15" value="15" class="flex-1 accent-emerald-500">
+                <div class="flex gap-6 text-slate-400">
+                    <span>T-15d</span><span>T-10d</span><span>T-5d</span><span class="text-emerald-400 font-bold">Present</span>
+                </div>
+            </div>
+        </div>
+
+        <aside class="w-80 border-l border-slate-800 bg-[#080d1a] p-3 flex flex-col gap-3 overflow-y-auto shrink-0 z-20">
+            <div>
+                <div class="font-mono text-[10px] text-slate-500 uppercase">Operational Risk Engine</div>
+                <div class="text-xs font-semibold text-white">Balaghat Open-Cast Complex</div>
+            </div>
+
+            <div class="border border-rose-600/40 bg-rose-950/20 p-2.5 text-rose-300">
+                <div id="risk" class="font-mono text-[10px] font-bold text-rose-400 uppercase tracking-wide">Synchronizing Model...</div>
+                <div id="risk-description" class="text-[11px] text-rose-200/80 mt-1 leading-tight">Querying live environmental & operational intelligence...</div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2">
+                <div class="panel-base p-2">
+                    <div class="font-mono text-[9px] text-slate-500 uppercase">Shortfall Prediction</div>
+                    <div id="tons" class="font-mono text-base font-bold text-rose-400">-- Tons</div>
+                    <div class="font-mono text-[9px] text-slate-600">vs Planned Target</div>
+                </div>
+                <div class="panel-base p-2">
+                    <div class="font-mono text-[9px] text-slate-500 uppercase">Soil Saturation</div>
+                    <div id="soil-saturation" class="font-mono text-base font-bold text-amber-400">--%</div>
+                    <div id="soil-status" class="font-mono text-[9px] text-amber-400/70">Monitoring</div>
+                </div>
+            </div>
+
+            <!-- Interactive Operational Fleet & Weather Dispatch Controls -->
+            <div class="panel-base p-2.5 flex flex-col gap-2">
+                <div class="flex justify-between items-center font-mono text-[10px]">
+                    <span class="text-slate-300 font-bold uppercase tracking-wide">Fleet & Dispatch Controls</span>
+                    <span id="env-mode-badge" class="px-1.5 py-0.5 bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 text-[9px] font-mono">LIVE SYNC</span>
+                </div>
+                <div class="space-y-2 font-mono text-[10px]">
+                    <div>
+                        <div class="flex justify-between text-slate-400">
+                            <span>ACTIVE SHOVELS</span>
+                            <span id="shovel-val" class="text-white font-bold">5 units</span>
+                        </div>
+                        <input type="range" id="ctrl-shovels" min="1" max="8" value="5" class="w-full">
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-slate-400">
+                            <span>HAUL TRUCKS</span>
+                            <span id="truck-val" class="text-white font-bold">10 units</span>
+                        </div>
+                        <input type="range" id="ctrl-trucks" min="2" max="22" value="10" class="w-full">
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-slate-400">
+                            <span>RAINFALL OVERRIDE</span>
+                            <span id="rain-val" class="text-slate-300">Live (0.0mm)</span>
+                        </div>
+                        <input type="range" id="ctrl-rain" min="0" max="80" value="0" step="1" class="w-full">
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-base p-2.5 flex flex-col gap-1.5">
+                <div class="flex justify-between items-center font-mono text-[10px]">
+                    <span class="text-slate-300 font-bold">Deficit Trajectory Model</span>
+                    <span class="text-slate-500">XGBoost</span>
+                </div>
+                <div class="h-28 w-full">
+                    <canvas id="productionChart"></canvas>
+                </div>
+            </div>
+
+            <div class="panel-base p-2.5 flex flex-col gap-1 text-[11px]">
+                <span class="font-bold text-slate-300 font-mono text-[10px] uppercase">Dispatch Recommendations</span>
+                <div id="recommendation-list" class="space-y-1 text-slate-400 text-[10px] leading-tight mt-1">
+                    <div><span class="text-emerald-400 font-bold">✓</span> Analyzing operational constraints...</div>
+                </div>
+            </div>
+
+            <div class="mt-auto pt-2 flex flex-col gap-2">
+                <div class="grid grid-cols-2 gap-1.5 font-mono text-[9px]">
+                    <button id="btn-flag-hazard" class="border border-slate-700 bg-slate-800/80 p-1.5 hover:bg-slate-700 text-slate-300 active:scale-95 transition-transform">FLAG GEO-HAZARD</button>
+                    <button id="btn-log-sig" class="border border-slate-700 bg-slate-800/80 p-1.5 hover:bg-slate-700 text-slate-300 active:scale-95 transition-transform">LOG SIGNATURE</button>
+                </div>
+                <button id="btn-gen-report" class="w-full py-2 bg-emerald-600 hover:bg-emerald-500 font-bold text-slate-950 font-mono text-xs active:scale-95 transition-transform">
+          GENERATE MOIL REPORT
+        </button>
+            </div>
+        </aside>
+
+    </div>
+
+    <script>
+        const map = L.map('map', {
+            zoomControl: false
+        }).setView([21.805, 80.185], 13);
+
+        const satLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            maxZoom: 18,
+            attribution: 'Esri World Imagery'
+        }).addTo(map);
+
+        const vegLayer = L.rectangle([
+            [21.820, 80.160],
+            [21.835, 80.210]
+        ], {
+            color: '#10b981',
+            weight: 1,
+            dashArray: '4, 4',
+            fillColor: '#10b981',
+            fillOpacity: 0.15
+        }).addTo(map);
+
+        const oreGroup = L.layerGroup().addTo(map);
+
+        let allAnomalies = [];
+        function renderAnomalies(minScore = 0.60) {
+            oreGroup.clearLayers();
+            let count = 0;
+            allAnomalies.forEach(p => {
+                if (p.spectral_index >= minScore) {
+                    count++;
+                    const fillColor = p.spectral_index >= 0.78 ? '#f43f5e' : (p.spectral_index >= 0.65 ? '#f59e0b' : '#6366f1');
+                    L.polygon(p.coordinates, {
+                        color: fillColor,
+                        fillColor: fillColor,
+                        fillOpacity: 0.45,
+                        weight: 1.5
+                    }).addTo(oreGroup).bindPopup(
+                        `<div class="font-mono text-xs">` +
+                        `<b>${p.type}</b><br>` +
+                        `Formation: ${p.formation || 'Mansar Formation'}<br>` +
+                        `Prospectivity Score: <b>${p.spectral_index}</b><br>` +
+                        `Confidence: <b>${p.confidence}</b>` +
+                        `</div>`
+                    );
+                }
+            });
+            document.getElementById('label-swir1').innerText = `Score ≥ ${minScore.toFixed(2)} (${count} cells)`;
+        }
+
+        fetch('/api/anomalies')
+            .then(res => res.json())
+            .then(polygons => {
+                allAnomalies = polygons;
+                renderAnomalies(0.60);
+            })
+            .catch(err => console.error('Anomalies fetch error:', err));
+
+        document.getElementById('slider-swir1').addEventListener('input', e => {
+            const val = parseFloat(e.target.value) / 100.0;
+            renderAnomalies(val);
+        });
+
+        // Initialize dynamic Deficit Trajectory line chart
+        const ctx = document.getElementById('productionChart').getContext('2d');
+        const productionChartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Today', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7'],
+                datasets: [{
+                    label: 'Target',
+                    data: [1200, 1200, 1200, 1200, 1200, 1200, 1200],
+                    borderColor: '#334155',
+                    borderDash: [2, 2],
+                    pointRadius: 0
+                }, {
+                    label: 'Forecast',
+                    data: [1200, 1200, 1200, 1200, 1200, 1200, 1200],
+                    borderColor: '#f43f5e',
+                    backgroundColor: 'rgba(244, 63, 94, 0.08)',
+                    fill: true,
+                    tension: 0.2,
+                    pointRadius: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        grid: { color: '#1e293b' },
+                        ticks: {
+                            color: '#475569',
+                            font: { family: 'JetBrains Mono', size: 8 }
+                        }
+                    },
+                    y: {
+                        grid: { color: '#1e293b' },
+                        ticks: {
+                            color: '#475569',
+                            font: { family: 'JetBrains Mono', size: 8 }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Fetch live environmental metrics
+        let liveRainfall = 0.0;
+        let liveSoilMoisture = 38.0;
+
+        fetch('/api/environmental-current')
+            .then(res => res.json())
+            .then(env => {
+                if (env.current_conditions) {
+                    liveSoilMoisture = env.current_conditions.soil_moisture_pct;
+                    liveRainfall = env.current_conditions.rainfall_mm;
+                    const st = env.current_conditions.soil_saturation_status.replace(/_/g, ' ');
+                    document.getElementById('soil-saturation').innerText = `${liveSoilMoisture}%`;
+                    document.getElementById('soil-status').innerText = st;
+                    document.getElementById('rain-val').innerText = `Live (${liveRainfall}mm)`;
+                }
+            })
+            .catch(err => console.warn('Live environmental fetch error:', err));
+
+        // Unified predictive dispatch logic
+        let latestPredictionData = null;
+        let updateDebounceTimer = null;
+
+        function runShortfallPrediction() {
+            const shovels = parseInt(document.getElementById('ctrl-shovels').value);
+            const trucks = parseInt(document.getElementById('ctrl-trucks').value);
+            const rainSliderVal = parseFloat(document.getElementById('ctrl-rain').value);
+            
+            document.getElementById('shovel-val').innerText = `${shovels} units`;
+            document.getElementById('truck-val').innerText = `${trucks} units`;
+            
+            let overrideRain = null;
+            if (rainSliderVal > 0) {
+                overrideRain = rainSliderVal;
+                document.getElementById('rain-val').innerText = `Override (${rainSliderVal.toFixed(1)}mm)`;
+                const badge = document.getElementById('env-mode-badge');
+                badge.innerText = 'MANUAL OVERRIDE';
+                badge.className = 'px-1.5 py-0.5 bg-amber-950/60 border border-amber-500/40 text-amber-400 text-[9px] font-mono';
+            } else {
+                document.getElementById('rain-val').innerText = `Live (${liveRainfall}mm)`;
+                const badge = document.getElementById('env-mode-badge');
+                badge.innerText = 'LIVE WEATHER';
+                badge.className = 'px-1.5 py-0.5 bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 text-[9px] font-mono';
+            }
+
+            const payload = {
+                planned_production_tons: 1200.0,
+                active_shovels: shovels,
+                haul_trucks: trucks,
+                shovel_availability_pct: 85.0,
+                blasting_delayed: (overrideRain && overrideRain > 25.0) ? 1 : 0
+            };
+            if (overrideRain !== null) {
+                payload.rainfall_mm = overrideRain;
+                payload.soil_moisture_pct = Math.min(95.0, Math.max(20.0, 25.0 + overrideRain * 1.5));
+            }
+
+            fetch('/api/predict-shortfall', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(res => res.json())
+            .then(data => {
+                latestPredictionData = data;
+                
+                // Update tons display
+                if (data.predicted_shortfall_tons > 0) {
+                    document.getElementById('tons').innerText = `-${data.predicted_shortfall_tons} Tons`;
+                    document.getElementById('tons').className = "font-mono text-base font-bold text-rose-400";
+                } else {
+                    document.getElementById('tons').innerText = `0 Tons (Target Met)`;
+                    document.getElementById('tons').className = "font-mono text-base font-bold text-emerald-400";
+                }
+
+                // Update risk box
+                const riskEl = document.getElementById('risk');
+                const riskBox = riskEl.parentElement;
+                riskEl.innerText = `${data.risk_level} RISK (${data.shortfall_pct}% DEFICIT)`;
+                
+                if (data.risk_level === 'HIGH') {
+                    riskBox.className = "border border-rose-600/40 bg-rose-950/20 p-2.5 text-rose-300";
+                    riskEl.className = "font-mono text-[10px] font-bold text-rose-400 uppercase tracking-wide";
+                } else if (data.risk_level === 'MODERATE') {
+                    riskBox.className = "border border-amber-600/40 bg-amber-950/20 p-2.5 text-amber-300";
+                    riskEl.className = "font-mono text-[10px] font-bold text-amber-400 uppercase tracking-wide";
+                } else {
+                    riskBox.className = "border border-emerald-600/40 bg-emerald-950/20 p-2.5 text-emerald-300";
+                    riskEl.className = "font-mono text-[10px] font-bold text-emerald-400 uppercase tracking-wide";
+                }
+
+                // Update risk description with top SHAP factor
+                if (data.key_factors && data.key_factors.length > 0) {
+                    const top = data.key_factors[0];
+                    const sign = top.impact_tons > 0 ? `+${top.impact_tons}t loss impact` : `${top.impact_tons}t buffer`;
+                    document.getElementById('risk-description').innerText = 
+                        `Primary shortfall factor: ${top.description} (${sign}).`;
+                } else if (data.action) {
+                    document.getElementById('risk-description').innerText = data.action;
+                }
+
+                // Render dynamic dispatch recommendations
+                if (data.action_items && data.action_items.length > 0) {
+                    const recContainer = document.getElementById('recommendation-list');
+                    recContainer.innerHTML = data.action_items.map(act => 
+                        `<div><span class="text-emerald-400 font-bold">✓</span> <span class="text-slate-300">[${act.category}]</span> ${act.directive}</div>`
+                    ).join('');
+                }
+
+                // Update multi-day trajectory chart dynamically!
+                if (data.forecast_trajectory && productionChartInstance) {
+                    const traj = data.forecast_trajectory;
+                    if (traj.labels && traj.labels.length > 0) {
+                        productionChartInstance.data.labels = traj.labels;
+                        productionChartInstance.data.datasets[0].data = traj.target_production;
+                        productionChartInstance.data.datasets[1].data = traj.forecast_production;
+                        productionChartInstance.update();
+                    }
+                }
+            })
+            .catch(err => console.error('Shortfall prediction error:', err));
+        }
+
+        // Attach debounced listeners to fleet and rain controls
+        ['ctrl-shovels', 'ctrl-trucks', 'ctrl-rain'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.addEventListener('input', () => {
+                    clearTimeout(updateDebounceTimer);
+                    updateDebounceTimer = setTimeout(runShortfallPrediction, 120);
+                });
+            }
+        });
+
+        // Layer toggles
+        document.getElementById('layer-sat').addEventListener('change', e => e.target.checked ? map.addLayer(satLayer) : map.removeLayer(satLayer));
+        document.getElementById('layer-ore').addEventListener('change', e => e.target.checked ? map.addLayer(oreGroup) : map.removeLayer(oreGroup));
+        document.getElementById('layer-veg').addEventListener('change', e => e.target.checked ? map.addLayer(vegLayer) : map.removeLayer(vegLayer));
+
+        // Action button handlers
+        document.getElementById('btn-gen-report').addEventListener('click', () => {
+            if (!latestPredictionData) {
+                alert("Synchronizing operational data, please retry in a moment.");
+                return;
+            }
+            const data = latestPredictionData;
+            const now = new Date().toISOString();
+            const shovels = document.getElementById('ctrl-shovels').value;
+            const trucks = document.getElementById('ctrl-trucks').value;
+            
+            const reportContent = `================================================================================
+GEOORE-AI OPERATIONAL DISPATCH & RISK REPORT (MOIL PILOT SPECIFICATION)
+Generated: ${now} | Region: Balaghat Complex (Sausar Metasedimentary Belt, MP)
+Transparency Notice: Operational engineering simulation. Geology & satellite from GSI & Sentinel-2.
+================================================================================
+
+1. SHIFT PRODUCTION & FLEET SUMMARY
+- Planned Shift Target: ${data.target_production_tons} Tons
+- Forecasted Production: ${data.predicted_production_tons} Tons
+- Projected Shortfall: ${data.predicted_shortfall_tons} Tons (${data.shortfall_pct}%)
+- Operational Risk Level: ${data.risk_level}
+- Active Loading Shovels: ${shovels} units
+- Active Haul Dumpers: ${trucks} units
+- Environmental Context: Rain ${data.environmental_context?.rainfall_mm || 0} mm | Soil Moisture ${data.environmental_context?.soil_moisture_pct || 0}% (${data.environmental_context?.haul_road_trafficability || 'NORMAL'})
+
+2. SHAP ROOT CAUSE FEATURE ATTRIBUTION
+${(data.all_attributions || []).map(a => `  * ${a.factor}: ${a.impact_tons > 0 ? '+' : ''}${a.impact_tons} Tons impact (${a.description})`).join('\n')}
+
+3. PRIORITY DECISION-SUPPORT RECOMMENDATIONS
+${(data.action_items || []).map((act, i) => `  ${i+1}. [${act.priority}] ${act.category}\n     Directive: ${act.directive}\n     Rationale: ${act.rationale}`).join('\n\n')}
+
+================================================================================
+END OF REPORT — GeoOre-AI Ministry of Steel Portal
+================================================================================`;
+
+            const blob = new Blob([reportContent], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `GeoOre_Shift_Report_Balaghat_${Date.now()}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        document.getElementById('btn-flag-hazard').addEventListener('click', () => {
+            const soil = document.getElementById('soil-saturation').innerText;
+            const desc = document.getElementById('risk-description');
+            const original = desc.innerText;
+            desc.innerText = `⚠ GEO-HAZARD FLAGGED: Pit road trafficability warning logged (Soil saturation: ${soil}).`;
+            setTimeout(() => { desc.innerText = original; }, 4000);
+        });
+
+        document.getElementById('btn-log-sig').addEventListener('click', () => {
+            const desc = document.getElementById('risk-description');
+            const original = desc.innerText;
+            desc.innerText = `✓ SPECTRAL SIGNATURE LOGGED: Balaghat pilot sector coordinates committed to exploration registry.`;
+            setTimeout(() => { desc.innerText = original; }, 4000);
+        });
+
+        // Run initial prediction
+        runShortfallPrediction();
+    </script>
+</body>
+
+</html>

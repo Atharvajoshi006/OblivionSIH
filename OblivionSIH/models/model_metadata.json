@@ -1,0 +1,20 @@
+{
+  "status": "trained_success",
+  "model_type": "XGBRegressor",
+  "feature_count": 8,
+  "features": [
+    "planned_production_tons",
+    "active_shovels",
+    "shovel_availability_pct",
+    "haul_trucks",
+    "rainfall_mm",
+    "soil_moisture_pct",
+    "temperature_c",
+    "blasting_delayed"
+  ],
+  "metrics": {
+    "mae_tons": 42.3,
+    "r2_score": 0.9721
+  },
+  "dataset_notice": "Trained on calibrated engineering simulation (mine_operations_simulated.csv)"
+}
