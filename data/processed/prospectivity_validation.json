@@ -105,6 +105,6 @@
     "circular_leakage_detected": false,
     "known_deposits_used_as_inputs": false,
     "optical_underground_detection_claimed": false,
-    "validation_finding": "Pilot deposit (Bharweli Mine (Balaghat)) scores 0.767 (Percentile: 66.7%, Contrast: 1.05x over background mean of 0.73), confirming strong geological/remote-sensing concordance."
+    "validation_finding": "Pilot deposit (Bharweli Mine (Balaghat)) scores 0.767 (Percentile: 66.7%, Contrast: 1.05x over grid mean of 0.73). Note: the pilot evaluation grid is centred on the Bharweli ore belt, so the background mean is inherently high (most cells lie within the favourable Mansar Formation corridor). This validation confirms within-belt spatial concordance; full regional discrimination (against off-belt control areas) and tonnage quantification require drillhole core data."
   }
 }

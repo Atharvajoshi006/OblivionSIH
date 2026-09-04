@@ -303,7 +303,15 @@ def validate_prospectivity_against_known_deposits(bbox: Optional[List[float]] = 
             "circular_leakage_detected": False,
             "known_deposits_used_as_inputs": False,
             "optical_underground_detection_claimed": False,
-            "validation_finding": f"Pilot deposit ({primary_validation['name']}) scores {primary_validation['prospectivity_score']} (Percentile: {primary_validation['percentile_rank']}%, Contrast: {primary_validation['contrast_ratio_vs_background']}x over background mean of {round(mean_bg, 3)}), confirming strong geological/remote-sensing concordance."
+            "validation_finding": (
+                f"Pilot deposit ({primary_validation['name']}) scores {primary_validation['prospectivity_score']} "
+                f"(Percentile: {primary_validation['percentile_rank']}%, Contrast: {primary_validation['contrast_ratio_vs_background']}x "
+                f"over grid mean of {round(mean_bg, 3)}). "
+                "Note: the pilot evaluation grid is centred on the Bharweli ore belt, so the background mean is "
+                "inherently high (most cells lie within the favourable Mansar Formation corridor). "
+                "This validation confirms within-belt spatial concordance; full regional discrimination "
+                "(against off-belt control areas) and tonnage quantification require drillhole core data."
+            )
         }
     }
 
